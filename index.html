@@ -1,0 +1,2588 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#241307" />
+    <title>Undangan Pernikahan Adat Jawa - Aiga &amp; Ilham</title>
+
+    <!-- Metadata & SEO -->
+    <meta name="description"
+        content="Pawiwahan Agung &amp; Walimatul 'Ursy Aiga Prastiwi, S.H., M.Kn &amp; Muhammad Ilham, S.Kom. - 29 &amp; 30 November 2026." />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://undanganaigailham.vercel.app/" />
+    <meta property="og:title" content="Undangan Pernikahan - Aiga &amp; Ilham" />
+    <meta property="og:description"
+        content="Pawiwahan Agung &amp; Walimatul 'Ursy Aiga Prastiwi, S.H., M.Kn &amp; Muhammad Ilham, S.Kom. - 29 &amp; 30 November 2026." />
+    <meta property="og:image" content="https://undanganaigailham.vercel.app/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://undanganaigailham.vercel.app/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="831" />
+    <meta property="og:image:height" content="684" />
+    <meta property="og:locale" content="id_ID" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://undanganaigailham.vercel.app/" />
+    <meta name="twitter:title" content="Undangan Pernikahan - Aiga &amp; Ilham" />
+    <meta name="twitter:description"
+        content="Pawiwahan Agung &amp; Walimatul 'Ursy Aiga Prastiwi, S.H., M.Kn &amp; Muhammad Ilham, S.Kom. - 29 &amp; 30 November 2026." />
+    <meta name="twitter:image" content="https://undanganaigailham.vercel.app/og-image.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600;1,700&family=Great+Vibes&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script>document.documentElement.classList.add('js', 'locked');</script>
+
+    <style>
+        :root {
+            --gold-dark: #5e3908;
+            --gold-rich: #9e6b14;
+            --gold-mid: #d4af37;
+            --gold-bright: #fae078;
+            --gold-shine: #fffbe0;
+            --sogan-deep: #241307;
+            --sogan-brown: #472710;
+            --ivory-top: #fdf9f0;
+            --ivory-mid: #f7ecd6;
+            --ivory-bot: #edd9b4;
+            --ruby: #c2185b;
+            --emerald: #138a5b;
+            --sapphire: #1b8fb0;
+            --amber: #e08a00;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html.locked,
+        html.locked body {
+            overflow: hidden;
+            height: 100%;
+        }
+
+        body {
+            background: radial-gradient(circle at 50% 12%, #4a2a10 0%, #1a0d04 70%, #0d0602 100%);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--sogan-deep);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 28px 12px 40px;
+            overflow-x: hidden;
+        }
+
+        /* Latar batik kawung bergerak pelan */
+        .bg-batik {
+            position: fixed;
+            top: -60px;
+            left: -60px;
+            width: calc(100% + 120px);
+            height: calc(100% + 120px);
+            opacity: .12;
+            z-index: 0;
+            pointer-events: none;
+            animation: drift 50s linear infinite;
+        }
+
+        @keyframes drift {
+            to {
+                transform: translate(60px, 60px);
+            }
+        }
+
+        #royal-particles {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 20;
+        }
+
+        /* Hentikan semua animasi kartu sampai undangan dibuka */
+        html:not(.opened) .invitation-card,
+        html:not(.opened) .invitation-card * {
+            animation-play-state: paused;
+        }
+
+        /* =============== KARTU UTAMA =============== */
+        .invitation-card {
+            width: 100%;
+            max-width: 720px;
+            position: relative;
+            z-index: 2;
+            background: linear-gradient(180deg, var(--ivory-top) 0%, var(--ivory-mid) 55%, #f1dfb9 100%);
+            border: 5px solid var(--gold-mid);
+            box-shadow:
+                0 35px 90px rgba(0, 0, 0, .9),
+                0 0 0 8px var(--sogan-deep),
+                0 0 0 11px var(--gold-bright),
+                0 0 60px rgba(250, 224, 120, .35);
+            overflow: hidden;
+            opacity: 0;
+            transition: transform .18s ease-out;
+            will-change: transform;
+        }
+
+        html.opened .invitation-card {
+            opacity: 1;
+            animation: cardIn 1.7s cubic-bezier(.2, .8, .2, 1) .5s backwards;
+        }
+
+        @keyframes cardIn {
+            from {
+                opacity: 0;
+                transform: translateY(60px) scale(.94);
+                filter: brightness(1.6);
+            }
+
+            to {
+                opacity: 1;
+                transform: none;
+                filter: none;
+            }
+        }
+
+        .foil-glare {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle 340px at var(--gx, 50%) var(--gy, 25%), rgba(255, 251, 224, .42), rgba(250, 224, 120, .12) 45%, transparent 75%);
+            pointer-events: none;
+            z-index: 9;
+            mix-blend-mode: overlay;
+        }
+
+        .sheen {
+            position: absolute;
+            inset: 0;
+            z-index: 9;
+            pointer-events: none;
+            background: linear-gradient(115deg, transparent 38%, rgba(255, 251, 224, .5) 50%, transparent 62%);
+            background-size: 260% 100%;
+            mix-blend-mode: overlay;
+            animation: sheen 9s ease-in-out infinite;
+        }
+
+        @keyframes sheen {
+            0% {
+                background-position: 130% 0;
+            }
+
+            45%,
+            100% {
+                background-position: -130% 0;
+            }
+        }
+
+        .paper {
+            position: relative;
+        }
+
+        .batik-wm {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: .2;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Pilar batik emas */
+        .pillar {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 46px;
+            z-index: 3;
+            pointer-events: none;
+            overflow: hidden;
+            -webkit-mask-image: linear-gradient(180deg, #000 0, #000 calc(100% - 100px), transparent 100%);
+            mask-image: linear-gradient(180deg, #000 0, #000 calc(100% - 100px), transparent 100%);
+        }
+
+        .pillar-l {
+            left: 8px;
+        }
+
+        .pillar-r {
+            right: 8px;
+        }
+
+        .pillar svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .pillar::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 140px;
+            background: linear-gradient(180deg, transparent, rgba(255, 251, 224, .85), transparent);
+            animation: pillarShine 6.5s linear infinite;
+        }
+
+        .pillar-r::after {
+            animation-delay: -3s;
+        }
+
+        @keyframes pillarShine {
+            from {
+                top: -140px;
+            }
+
+            to {
+                top: 100%;
+            }
+        }
+
+        /* Mahkota emas atas */
+        .crest {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: min(60%, 360px);
+            z-index: 4;
+            pointer-events: none;
+            filter: drop-shadow(0 3px 4px rgba(94, 57, 8, .3));
+        }
+
+        .gem-pulse {
+            animation: gemPulse 2.4s ease-in-out infinite;
+            transform-origin: 180px 40px;
+        }
+
+        @keyframes gemPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                filter: brightness(1);
+            }
+
+            50% {
+                transform: scale(1.25);
+                filter: brightness(1.5);
+            }
+        }
+
+        /* Rangkaian bunga sudut */
+        .corner {
+            position: absolute;
+            top: 0;
+            width: 30%;
+            min-width: 112px;
+            aspect-ratio: 300 / 380;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .corner-l {
+            left: 0;
+        }
+
+        .corner-r {
+            right: 0;
+            transform: scaleX(-1);
+        }
+
+        .corner svg,
+        .pf svg,
+        .sogan-c {
+            width: 100%;
+            height: 100%;
+            display: block;
+            overflow: visible;
+        }
+
+        /* Animasi elemen SVG (bunga, daun, rumbai) */
+        .fl {
+            animation: flBloom 1.9s cubic-bezier(.2, .9, .3, 1.25) both, flSway 7s ease-in-out infinite;
+            animation-delay: calc(var(--d, 0) * 1s + .5s), calc(var(--d, 0) * 1s + 2.5s);
+        }
+
+        @keyframes flBloom {
+            from {
+                transform: scale(0) rotate(-40deg);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1) rotate(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes flSway {
+
+            0%,
+            100% {
+                transform: rotate(0) scale(1);
+            }
+
+            25% {
+                transform: rotate(3deg) scale(1.035);
+            }
+
+            75% {
+                transform: rotate(-3deg) scale(1.035);
+            }
+        }
+
+        .lf {
+            animation: lfBloom 1.5s ease-out both, lfSway 6s ease-in-out infinite;
+            animation-delay: calc(var(--d, 0) * 1s + .3s), calc(var(--d, 0) * 1s + 1.8s);
+        }
+
+        @keyframes lfBloom {
+            from {
+                transform: scale(0) rotate(-25deg);
+            }
+
+            to {
+                transform: scale(1) rotate(0);
+            }
+        }
+
+        @keyframes lfSway {
+
+            0%,
+            100% {
+                transform: rotate(0);
+            }
+
+            33% {
+                transform: rotate(3deg);
+            }
+
+            66% {
+                transform: rotate(-3deg);
+            }
+        }
+
+        .swing {
+            animation: swing 4.8s ease-in-out infinite;
+            animation-delay: calc(var(--d, 0) * -1s);
+        }
+
+        @keyframes swing {
+
+            0%,
+            100% {
+                transform: rotate(-3.5deg);
+            }
+
+            50% {
+                transform: rotate(3.5deg);
+            }
+        }
+
+        .twinkle {
+            animation: twinkle 2.6s ease-in-out infinite;
+            animation-delay: calc(var(--d, 0) * 1s);
+        }
+
+        @keyframes twinkle {
+
+            0%,
+            100% {
+                opacity: .15;
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* Header */
+        .royal-header {
+            position: relative;
+            z-index: 6;
+            text-align: center;
+            margin: 0 auto;
+            width: 46%;
+            min-width: 230px;
+            padding-top: 86px;
+        }
+
+        .bismillah-calligraphy {
+            font-family: 'Amiri', serif;
+            font-size: clamp(1.3rem, 3.9vw, 2.3rem);
+            white-space: nowrap;
+            font-weight: 700;
+            line-height: 1.4;
+            background: linear-gradient(180deg, #472710 0%, #9e6b14 55%, #5e3908 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 2px 2px rgba(250, 224, 120, .85));
+        }
+
+        .main-inv-title {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: clamp(.95rem, 2.6vw, 1.4rem);
+            font-weight: 900;
+            letter-spacing: 4px;
+            color: var(--sogan-deep);
+            margin-top: 2px;
+            text-shadow: 0 1px 0 var(--gold-bright);
+        }
+
+        .title-underline-ornament {
+            width: 210px;
+            max-width: 100%;
+            height: 18px;
+            margin: 6px auto 0;
+            display: block;
+        }
+
+        .title-underline-ornament line {
+            stroke-dasharray: 90;
+            stroke-dashoffset: 90;
+            animation: drawLine 2.2s ease-out 1.2s forwards;
+        }
+
+        @keyframes drawLine {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        /* Isi */
+        .invitation-body {
+            position: relative;
+            z-index: 6;
+            padding: 14px 74px 22px;
+            text-align: center;
+        }
+
+        .sacred-verse {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.04rem;
+            font-weight: 700;
+            line-height: 1.6;
+            color: var(--sogan-brown);
+            margin-bottom: 18px;
+        }
+
+        .royal-couple-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.3rem, 6.2vw, 3.85rem);
+            font-weight: 700;
+            -webkit-text-stroke: 1px #472710;
+            line-height: 1.16;
+            padding: 2px 8px;
+            background: linear-gradient(105deg, #472710 0%, #b8861e 26%, #fff3b0 48%, #7a5210 68%, #3d200a 100%);
+            background-size: 220% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: goldShimmer 4.5s linear infinite;
+            filter: drop-shadow(0 2px 3px rgba(71, 39, 16, .2));
+        }
+
+        @keyframes goldShimmer {
+            0% {
+                background-position: 220% center;
+            }
+
+            100% {
+                background-position: 0% center;
+            }
+        }
+
+        .parents-info {
+            font-size: .85rem;
+            font-weight: 700;
+            color: var(--sogan-deep);
+            line-height: 1.45;
+            margin-top: 3px;
+        }
+
+        .origin-info {
+            font-size: .8rem;
+            font-weight: 600;
+            color: var(--sogan-brown);
+            margin-top: 2px;
+        }
+
+        .connector-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 15px 0 10px;
+        }
+
+        .connector-line {
+            width: 56px;
+            height: 1.5px;
+            background: linear-gradient(90deg, transparent, var(--gold-rich), var(--ruby));
+        }
+
+        .connector-line.right {
+            background: linear-gradient(90deg, var(--emerald), var(--gold-rich), transparent);
+        }
+
+        .connector-wrap em {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.32rem;
+            font-weight: 700;
+            color: var(--sogan-brown);
+        }
+
+        .akad-banner {
+            display: inline-block;
+            margin: 22px auto 12px;
+            padding: 8px 40px;
+            background: linear-gradient(135deg, #faecc4 0%, #e3b94f 50%, #faecc4 100%);
+            border: 2px solid var(--gold-dark);
+            border-radius: 30px;
+            box-shadow: 0 6px 18px rgba(94, 57, 8, .28);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .akad-banner::before,
+        .akad-banner::after {
+            content: "❖";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: .9rem;
+        }
+
+        .akad-banner::before {
+            left: 14px;
+            color: var(--ruby);
+        }
+
+        .akad-banner::after {
+            right: 14px;
+            color: var(--emerald);
+        }
+
+        .akad-banner h2 {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.15rem;
+            font-weight: 900;
+            color: var(--sogan-deep);
+            letter-spacing: 1.2px;
+        }
+
+        .akad-details {
+            font-size: .88rem;
+            font-weight: 700;
+            line-height: 1.65;
+            color: var(--sogan-deep);
+        }
+
+        .ornament-sep {
+            width: 78%;
+            height: 2px;
+            margin: 22px auto;
+            background: linear-gradient(90deg, transparent, var(--gold-rich), var(--amber), var(--gold-rich), transparent);
+            position: relative;
+        }
+
+        .ornament-sep::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 10px;
+            height: 10px;
+            background: var(--gold-mid);
+            border: 1.5px solid var(--gold-dark);
+            transform: translate(-50%, -50%) rotate(45deg);
+            animation: sepPulse 2.6s ease-in-out infinite;
+        }
+
+        @keyframes sepPulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(212, 175, 55, .6);
+            }
+
+            50% {
+                box-shadow: 0 0 0 8px rgba(212, 175, 55, 0);
+            }
+        }
+
+        .date-stamp {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.02rem;
+            font-weight: 700;
+            color: var(--gold-dark);
+        }
+
+        .salam-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--sogan-deep);
+            margin: 4px 0 6px;
+        }
+
+        .resepsi-intro {
+            font-size: .84rem;
+            font-weight: 600;
+            line-height: 1.6;
+            color: var(--sogan-brown);
+            max-width: 530px;
+            margin: 0 auto 20px;
+        }
+
+        .resepsi-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 28px;
+            margin: 22px auto 24px;
+            flex-wrap: wrap;
+        }
+
+        .medallion-wrap {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            animation: medPulse 4.2s ease-in-out infinite;
+        }
+
+        @keyframes medPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.035);
+            }
+        }
+
+        .med-ring {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .med-ring.r1 {
+            inset: -12px;
+            border: 2px dashed var(--gold-rich);
+            animation: spin 36s linear infinite;
+        }
+
+        .med-ring.r2 {
+            inset: -20px;
+            border: 3px dotted var(--ruby);
+            opacity: .7;
+            animation: spin 50s linear infinite reverse;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .medallion-date {
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, #fffdf4 0%, #f2cf66 65%, #9e6b14 100%);
+            border: 3px solid var(--gold-dark);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 0 4px rgba(194, 24, 91, .25), 0 0 0 8px rgba(27, 143, 176, .2), 0 10px 24px rgba(36, 19, 7, .32);
+        }
+
+        .med-top {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: .68rem;
+            font-weight: 900;
+            color: #80103e;
+            letter-spacing: 1px;
+        }
+
+        .med-day {
+            font-size: .82rem;
+            font-weight: 800;
+            color: var(--sogan-deep);
+        }
+
+        .med-num {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2.35rem;
+            font-weight: 900;
+            line-height: 1;
+            color: var(--sogan-deep);
+            margin: 2px 0;
+        }
+
+        .med-month {
+            font-size: .72rem;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--sogan-deep);
+        }
+
+        .v-divider {
+            width: 3px;
+            height: 105px;
+            background: linear-gradient(180deg, var(--sapphire), var(--gold-dark), var(--ruby));
+            border-radius: 3px;
+        }
+
+        .venue-box {
+            text-align: left;
+            max-width: 270px;
+        }
+
+        .venue-time {
+            font-size: .92rem;
+            font-weight: 800;
+            color: var(--sogan-deep);
+            margin-bottom: 5px;
+        }
+
+        .venue-addr {
+            font-size: .86rem;
+            font-weight: 700;
+            line-height: 1.5;
+            color: var(--sogan-brown);
+        }
+
+        /* Hitung mundur */
+        .countdown {
+            margin: 6px auto 16px;
+            max-width: 470px;
+        }
+
+        .cd-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 1.15rem;
+            color: var(--gold-dark);
+            margin-bottom: 8px;
+        }
+
+        .cd-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .cd-box {
+            padding: 10px 4px 8px;
+            border-radius: 12px;
+            background: linear-gradient(160deg, #3a200c, #1b0e05);
+            border: 1.5px solid var(--gold-mid);
+            box-shadow: 0 6px 16px rgba(36, 19, 7, .35), inset 0 0 0 3px rgba(250, 224, 120, .12);
+        }
+
+        .cd-box span {
+            display: block;
+            font-family: 'Cinzel Decorative', serif;
+            font-weight: 900;
+            font-size: 1.6rem;
+            line-height: 1.1;
+            background: linear-gradient(180deg, #fffbe0, #fae078 50%, #d4af37);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cd-box small {
+            display: block;
+            font-size: .6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #e9cf86;
+            margin-top: 2px;
+        }
+
+        .cd-box.tick span {
+            animation: tick .45s ease;
+        }
+
+        @keyframes tick {
+            0% {
+                transform: translateY(-7px);
+                opacity: .25;
+            }
+
+            100% {
+                transform: none;
+                opacity: 1;
+            }
+        }
+
+        .cd-note {
+            font-size: .8rem;
+            font-weight: 700;
+            color: var(--sogan-brown);
+            margin-top: 8px;
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin: 6px 0 16px;
+        }
+
+        .btn-gold {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            padding: 9px 18px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: .7rem;
+            letter-spacing: 1.3px;
+            text-transform: uppercase;
+            color: var(--sogan-deep);
+            background: linear-gradient(135deg, #faecc4, #e3b94f 50%, #faecc4);
+            border: 1.5px solid var(--gold-dark);
+            box-shadow: 0 5px 14px rgba(94, 57, 8, .3);
+            transition: transform .25s, box-shadow .25s;
+        }
+
+        .btn-gold::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 40%;
+            left: -60%;
+            background: linear-gradient(100deg, transparent, rgba(255, 255, 255, .75), transparent);
+            animation: btnSheen 3.8s ease-in-out infinite;
+        }
+
+        @keyframes btnSheen {
+
+            0%,
+            55% {
+                left: -60%;
+            }
+
+            100% {
+                left: 130%;
+            }
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 9px 20px rgba(94, 57, 8, .4);
+        }
+
+        .closing-verse {
+            font-size: .84rem;
+            font-weight: 600;
+            line-height: 1.65;
+            color: var(--sogan-brown);
+            max-width: 550px;
+            margin: 10px auto 8px;
+        }
+
+        .regards-label {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--gold-dark);
+            margin-top: 16px;
+            margin-bottom: 4px;
+        }
+
+        .parents-host {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: .9rem;
+            font-weight: 700;
+            color: var(--sogan-deep);
+            letter-spacing: 0;
+        }
+
+        .segenap-keluarga {
+            font-size: .84rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--sogan-brown);
+            margin-top: 2px;
+        }
+
+        /* Reveal */
+        html.js .js-reveal {
+            opacity: 0;
+            transform: translateY(26px);
+            transition: opacity .9s ease, transform .9s cubic-bezier(.22, 1, .36, 1);
+        }
+
+        html.js .js-reveal.revealed {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* =============== PANGGUNG BAWAH =============== */
+        .scene {
+            position: relative;
+            z-index: 4;
+            margin-top: -8px;
+            line-height: 0;
+        }
+
+        .scene-bg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .payung {
+            position: absolute;
+            bottom: 7%;
+            width: 25%;
+            z-index: 5;
+            transform-origin: 50% 100%;
+            animation: payungSway 7s ease-in-out infinite;
+            filter: drop-shadow(0 8px 12px rgba(36, 19, 7, .35));
+        }
+
+        .payung-l {
+            left: 1.5%;
+        }
+
+        .payung-r {
+            right: 1.5%;
+            animation-delay: -3s;
+        }
+
+        .payung svg {
+            width: 100%;
+            height: auto;
+            display: block;
+            overflow: visible;
+        }
+
+        @keyframes payungSway {
+
+            0%,
+            100% {
+                transform: rotate(-1.8deg);
+            }
+
+            50% {
+                transform: rotate(1.8deg);
+            }
+        }
+
+        .cloth {
+            animation: cloth 4.6s ease-in-out infinite alternate;
+        }
+
+        .cloth.c2 {
+            animation-delay: -2s;
+        }
+
+        @keyframes cloth {
+            from {
+                transform: skewX(-5deg) rotate(-1.5deg);
+            }
+
+            to {
+                transform: skewX(4deg) rotate(1.5deg);
+            }
+        }
+
+        .pf {
+            position: absolute;
+            bottom: 0;
+            width: 29%;
+            aspect-ratio: 200 / 260;
+            z-index: 8;
+            pointer-events: none;
+        }
+
+        .pf-l {
+            left: -1%;
+        }
+
+        .pf-r {
+            right: -1%;
+            transform: scaleX(-1);
+        }
+
+        .sogan-c {
+            position: absolute;
+            bottom: 0;
+            width: 36%;
+            height: auto;
+            z-index: 7;
+            pointer-events: none;
+        }
+
+        .sogan-c-l {
+            left: 0;
+        }
+
+        .sogan-c-r {
+            right: 0;
+            transform: scaleX(-1);
+        }
+
+        /* Elemen animasi di dalam scene SVG */
+        .rays {
+            transform-origin: 360px 195px;
+            animation: spin 120s linear infinite;
+        }
+
+        .cloud {
+            animation: cloudDrift 22s ease-in-out infinite alternate;
+            animation-delay: calc(var(--d, 0) * -1s);
+        }
+
+        @keyframes cloudDrift {
+            from {
+                transform: translateX(-34px);
+            }
+
+            to {
+                transform: translateX(34px);
+            }
+        }
+
+        .bird {
+            animation: fly 26s linear infinite;
+            animation-delay: calc(var(--d, 0) * -1s);
+        }
+
+        .bird path {
+            transform-origin: 12px 0;
+            animation: flap .55s ease-in-out infinite alternate;
+        }
+
+        @keyframes fly {
+            from {
+                transform: translateX(-60px);
+            }
+
+            to {
+                transform: translateX(780px);
+            }
+        }
+
+        @keyframes flap {
+            from {
+                transform: scaleY(1);
+            }
+
+            to {
+                transform: scaleY(.25);
+            }
+        }
+
+        .tree {
+            animation: treeSway 6s ease-in-out infinite;
+            animation-delay: calc(var(--d, 0) * -1s);
+        }
+
+        @keyframes treeSway {
+
+            0%,
+            100% {
+                transform: rotate(-1.2deg);
+            }
+
+            50% {
+                transform: rotate(1.2deg);
+            }
+        }
+
+        .frond {
+            animation: frond 3.8s ease-in-out infinite;
+            animation-delay: calc(var(--d, 0) * -1s);
+        }
+
+        @keyframes frond {
+
+            0%,
+            100% {
+                transform: rotate(-3deg);
+            }
+
+            50% {
+                transform: rotate(4deg);
+            }
+        }
+
+        .rip {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 1.2;
+            stroke-linecap: round;
+            opacity: .45;
+            animation: ripple 5s ease-in-out infinite;
+            animation-delay: calc(var(--d, 0) * -1s);
+        }
+
+        @keyframes ripple {
+
+            0%,
+            100% {
+                transform: translateX(-9px);
+                opacity: .15;
+            }
+
+            50% {
+                transform: translateX(9px);
+                opacity: .6;
+            }
+        }
+
+        .win rect:first-child {
+            animation: flicker 3.2s ease-in-out infinite;
+        }
+
+        @keyframes flicker {
+
+            0%,
+            100% {
+                fill: #ffd36b;
+            }
+
+            40% {
+                fill: #ffe9a3;
+            }
+
+            70% {
+                fill: #ffc24a;
+            }
+        }
+
+        .glow {
+            animation: lampGlow 2.8s ease-in-out infinite;
+            transform-origin: center;
+            transform-box: fill-box;
+        }
+
+        @keyframes lampGlow {
+
+            0%,
+            100% {
+                opacity: .55;
+                transform: scale(.9);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.18);
+            }
+        }
+
+        .ff {
+            animation: ffFloat 7s ease-in-out infinite, twinkle 2.4s ease-in-out infinite;
+            animation-delay: calc(var(--d, 0) * -1s);
+        }
+
+        @keyframes ffFloat {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            33% {
+                transform: translate(10px, -14px);
+            }
+
+            66% {
+                transform: translate(-8px, -6px);
+            }
+        }
+
+        .banner-shine {
+            animation: bannerShine 4.5s ease-in-out infinite;
+        }
+
+        @keyframes bannerShine {
+
+            0%,
+            60% {
+                transform: translateX(-120px);
+            }
+
+            100% {
+                transform: translateX(360px);
+            }
+        }
+
+        /* =============== COVER GERBANG =============== */
+        #cover {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+        #cover.gone {
+            display: none;
+        }
+
+        #cover .door {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50.4%;
+            background: #1a0d04;
+            transition: transform 1.9s cubic-bezier(.77, 0, .18, 1) .15s;
+            will-change: transform;
+        }
+
+        .door-l {
+            left: 0;
+        }
+
+        .door-r {
+            right: 0;
+        }
+
+        .door svg {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        html.opened .door-l {
+            transform: translateX(-101%);
+        }
+
+        html.opened .door-r {
+            transform: translateX(101%);
+        }
+
+        .cv-content {
+            position: absolute;
+            inset: 0;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+            transition: opacity .7s ease, transform 1s ease;
+        }
+
+        html.opened .cv-content {
+            opacity: 0;
+            transform: scale(1.2);
+            pointer-events: none;
+        }
+
+        .gunungan {
+            width: 92px;
+            height: auto;
+            animation: floatY 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 16px rgba(250, 224, 120, .7));
+        }
+
+        @keyframes floatY {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .cv-kicker {
+            font-family: 'Cinzel Decorative', serif;
+            font-weight: 700;
+            letter-spacing: 5px;
+            font-size: .85rem;
+            color: var(--gold-bright);
+            margin-top: 14px;
+            text-transform: uppercase;
+        }
+
+        .cv-names {
+            font-family: 'Great Vibes', cursive;
+            font-weight: 400;
+            font-size: clamp(3.4rem, 13vw, 6rem);
+            line-height: 1.1;
+            background: linear-gradient(105deg, #b8861e 0%, #fffbe0 30%, #fae078 50%, #b8861e 75%, #fffbe0 100%);
+            background-size: 220% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: goldShimmer 4s linear infinite;
+            margin: 4px 0;
+        }
+
+        .cv-date {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #f3deb0;
+        }
+
+        .cv-guest {
+            margin-top: 22px;
+            font-size: .8rem;
+            letter-spacing: 1px;
+            color: #e9cf86;
+            line-height: 1.6;
+        }
+
+        .cv-guest strong {
+            display: block;
+            font-size: 1.15rem;
+            color: #fffbe0;
+            letter-spacing: .5px;
+            max-width: 82vw;
+            overflow-wrap: anywhere;
+        }
+
+        .cv-btn {
+            margin-top: 24px;
+            cursor: pointer;
+            border: 2px solid var(--gold-bright);
+            border-radius: 40px;
+            padding: 13px 34px;
+            font-family: 'Cinzel Decorative', serif;
+            font-weight: 900;
+            font-size: .85rem;
+            letter-spacing: 2px;
+            color: var(--sogan-deep);
+            background: linear-gradient(135deg, #fffbe0, #fae078 45%, #d4af37);
+            animation: btnPulse 2.2s ease-in-out infinite;
+            transition: transform .25s;
+        }
+
+        .cv-btn:hover {
+            transform: scale(1.06);
+        }
+
+        @keyframes btnPulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(250, 224, 120, .6), 0 8px 24px rgba(0, 0, 0, .5);
+            }
+
+            50% {
+                box-shadow: 0 0 0 16px rgba(250, 224, 120, 0), 0 8px 24px rgba(0, 0, 0, .5);
+            }
+        }
+
+        button.btn-gold {
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        .map-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 1200;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+            background: rgba(10, 5, 2, .86);
+        }
+
+        .map-modal.show {
+            display: flex;
+            animation: mapFade .35s ease;
+        }
+
+        @keyframes mapFade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .map-box {
+            width: min(720px, 100%);
+            background: var(--ivory-top);
+            border: 3px solid var(--gold-mid);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 0 0 4px var(--sogan-deep), 0 0 0 6px var(--gold-bright), 0 25px 70px rgba(0, 0, 0, .8);
+        }
+
+        .map-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 14px;
+            background: linear-gradient(160deg, #3a200c, #1b0e05);
+            color: var(--gold-bright);
+            font-family: 'Cinzel Decorative', serif;
+            font-weight: 900;
+            font-size: .85rem;
+            letter-spacing: 2px;
+        }
+
+        .map-close {
+            cursor: pointer;
+            background: none;
+            border: 1.5px solid var(--gold-bright);
+            color: var(--gold-bright);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            line-height: 1;
+        }
+
+        .map-box iframe {
+            width: 100%;
+            height: min(58vh, 450px);
+            border: 0;
+            display: block;
+        }
+
+        .map-foot {
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* =============== RESPONSIF =============== */
+        @media (max-width: 620px) {
+            body {
+                padding: 14px 6px 30px;
+            }
+
+            .pillar {
+                width: 24px;
+            }
+
+            .pillar-l {
+                left: 3px;
+            }
+
+            .pillar-r {
+                right: 3px;
+            }
+
+            .corner {
+                width: 34%;
+            }
+
+            .royal-header {
+                padding-top: 96px;
+            }
+
+            .invitation-body {
+                padding: 14px 34px 20px;
+            }
+
+            .v-divider {
+                width: 70%;
+                height: 2px;
+            }
+
+            .venue-box {
+                text-align: center;
+            }
+
+            .cd-box span {
+                font-size: 1.25rem;
+            }
+
+            .gunungan {
+                width: 72px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .01ms !important;
+            }
+        }
+
+        /* =============== TOMBOL MUSIK LATAR =============== */
+        .music-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #fffbe0 0%, #fae078 45%, #d4af37 100%);
+            border: 2px solid var(--sogan-deep);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, .45), 0 0 12px rgba(250, 224, 120, .55);
+            color: var(--sogan-deep);
+            cursor: pointer;
+            z-index: 1100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transform: scale(.8);
+            transition: opacity .5s cubic-bezier(.2, .8, .2, 1), transform .3s ease, box-shadow .3s ease;
+        }
+
+        html.opened .music-btn {
+            opacity: 1;
+            pointer-events: auto;
+            transform: scale(1);
+        }
+
+        .music-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 22px rgba(0, 0, 0, .55), 0 0 16px rgba(250, 224, 120, .8);
+        }
+
+        .music-btn:active {
+            transform: scale(.95);
+        }
+
+        .music-btn svg {
+            width: 22px;
+            height: 22px;
+            display: block;
+            pointer-events: none;
+        }
+
+        .music-btn.playing .music-icon-spin {
+            animation: musicRotate 4s linear infinite;
+        }
+
+        .music-btn .icon-play {
+            display: block;
+        }
+
+        .music-btn .icon-pause {
+            display: none;
+        }
+
+        .music-btn:not(.playing) .icon-play {
+            display: none;
+        }
+
+        .music-btn:not(.playing) .icon-pause {
+            display: block;
+        }
+
+        @keyframes musicRotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @media (max-width: 620px) {
+            .music-btn {
+                bottom: 18px;
+                right: 18px;
+                width: 42px;
+                height: 42px;
+            }
+
+            .music-btn svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== DEFINISI SVG GLOBAL (gradien, pola batik, bentuk bunga) ===== -->
+    <svg width="0" height="0" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+        <defs>
+            <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#fffbe0" />
+                <stop offset=".35" stop-color="#fae078" />
+                <stop offset=".7" stop-color="#d4af37" />
+                <stop offset="1" stop-color="#9e6b14" />
+            </linearGradient>
+            <linearGradient id="gGoldV" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#fffbe0" />
+                <stop offset=".35" stop-color="#fae078" />
+                <stop offset=".7" stop-color="#d4af37" />
+                <stop offset="1" stop-color="#9e6b14" />
+            </linearGradient>
+            <linearGradient id="gGoldH" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#7a5210" />
+                <stop offset=".5" stop-color="#fffbe0" />
+                <stop offset="1" stop-color="#7a5210" />
+            </linearGradient>
+            <linearGradient id="gUmb" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#7a5210" />
+                <stop offset=".35" stop-color="#fae078" />
+                <stop offset=".62" stop-color="#d4af37" />
+                <stop offset="1" stop-color="#5e3908" />
+            </linearGradient>
+            <radialGradient id="gPetal" cx=".5" cy=".85" r=".95">
+                <stop offset="0" stop-color="#f3e2b0" />
+                <stop offset=".45" stop-color="#fffaf0" />
+                <stop offset="1" stop-color="#ffffff" />
+            </radialGradient>
+            <radialGradient id="gCenter">
+                <stop offset="0" stop-color="#fff3b0" />
+                <stop offset=".6" stop-color="#d4af37" />
+                <stop offset="1" stop-color="#9e6b14" />
+            </radialGradient>
+            <linearGradient id="gLeaf" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0" stop-color="#5d7d4a" />
+                <stop offset="1" stop-color="#a9bd8e" />
+            </linearGradient>
+            <linearGradient id="gLeafD" x1="0" y1="1" x2="0" y2="0">
+                <stop offset="0" stop-color="#2f4a2a" />
+                <stop offset="1" stop-color="#6d8c5a" />
+            </linearGradient>
+            <linearGradient id="gSogan" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#5e3514" />
+                <stop offset="1" stop-color="#241307" />
+            </linearGradient>
+            <linearGradient id="gSoganV" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#3d230d" />
+                <stop offset="1" stop-color="#150a03" />
+            </linearGradient>
+
+            <!-- Batik kawung emas -->
+            <pattern id="pKawungGold" width="40" height="40" patternUnits="userSpaceOnUse">
+                <g fill="none" stroke="#d4af37" stroke-width="1">
+                    <ellipse cx="20" cy="9" rx="5.5" ry="9" />
+                    <ellipse cx="20" cy="31" rx="5.5" ry="9" />
+                    <ellipse cx="9" cy="20" rx="9" ry="5.5" />
+                    <ellipse cx="31" cy="20" rx="9" ry="5.5" />
+                </g>
+                <circle cx="20" cy="20" r="1.8" fill="#fae078" />
+            </pattern>
+            <pattern id="pKawungBg" width="60" height="60" patternUnits="userSpaceOnUse">
+                <g transform="scale(1.5)" fill="none" stroke="#fae078" stroke-width="1">
+                    <ellipse cx="20" cy="9" rx="5.5" ry="9" />
+                    <ellipse cx="20" cy="31" rx="5.5" ry="9" />
+                    <ellipse cx="9" cy="20" rx="9" ry="5.5" />
+                    <ellipse cx="31" cy="20" rx="9" ry="5.5" />
+                </g>
+            </pattern>
+            <pattern id="pBatik" width="26" height="26" patternUnits="userSpaceOnUse">
+                <rect width="26" height="26" fill="#4a2810" />
+                <g transform="scale(.65)" fill="none" stroke="#e3b94f" stroke-width="1.1">
+                    <ellipse cx="20" cy="9" rx="5.5" ry="9" />
+                    <ellipse cx="20" cy="31" rx="5.5" ry="9" />
+                    <ellipse cx="9" cy="20" rx="9" ry="5.5" />
+                    <ellipse cx="31" cy="20" rx="9" ry="5.5" />
+                </g>
+                <circle cx="13" cy="13" r="1.3" fill="#fae078" />
+            </pattern>
+            <pattern id="pGeo" width="32" height="32" patternUnits="userSpaceOnUse">
+                <rect width="32" height="32" fill="#fcf5e3" />
+                <path d="M16 2L30 16L16 30L2 16Z" fill="none" stroke="#b8861e" stroke-width="1.2" />
+                <path d="M16 8L24 16L16 24L8 16Z" fill="none" stroke="#d4af37" stroke-width="1" />
+                <circle cx="16" cy="16" r="2.4" fill="#c2185b" />
+                <circle cx="0" cy="0" r="2" fill="#b8861e" />
+                <circle cx="32" cy="0" r="2" fill="#b8861e" />
+                <circle cx="0" cy="32" r="2" fill="#b8861e" />
+                <circle cx="32" cy="32" r="2" fill="#b8861e" />
+            </pattern>
+            <pattern id="pFil" width="22" height="22" patternUnits="userSpaceOnUse">
+                <path d="M11 1C16 5 16 17 11 21C6 17 6 5 11 1ZM1 11C5 6 17 6 21 11C17 16 5 16 1 11Z" fill="none"
+                    stroke="#7a5210" stroke-width=".7" opacity=".6" />
+            </pattern>
+
+            <!-- Bentuk bunga & daun (diisi lewat JS) -->
+            <g id="shapes"></g>
+        </defs>
+    </svg>
+
+    <svg class="bg-batik" aria-hidden="true">
+        <rect width="100%" height="100%" fill="url(#pKawungBg)" />
+    </svg>
+
+    <canvas id="royal-particles"></canvas>
+
+    <!-- ===== COVER GERBANG KERATON ===== -->
+    <div id="cover">
+        <div class="door door-l">
+            <svg preserveAspectRatio="none" aria-hidden="true">
+                <rect width="100%" height="100%" fill="url(#gSoganV)" />
+                <rect width="100%" height="100%" fill="url(#pKawungGold)" opacity=".28" />
+                <rect x="14" y="14" width="calc(100% - 14px)" height="calc(100% - 28px)" fill="none" stroke="#fae078"
+                    stroke-width="2.5" />
+                <rect x="26" y="26" width="calc(100% - 26px)" height="calc(100% - 52px)" fill="none" stroke="#9e6b14"
+                    stroke-width="1" stroke-dasharray="6 5" />
+            </svg>
+        </div>
+        <div class="door door-r">
+            <svg preserveAspectRatio="none" aria-hidden="true">
+                <rect width="100%" height="100%" fill="url(#gSoganV)" />
+                <rect width="100%" height="100%" fill="url(#pKawungGold)" opacity=".28" />
+                <rect x="0" y="14" width="calc(100% - 14px)" height="calc(100% - 28px)" fill="none" stroke="#fae078"
+                    stroke-width="2.5" />
+                <rect x="0" y="26" width="calc(100% - 26px)" height="calc(100% - 52px)" fill="none" stroke="#9e6b14"
+                    stroke-width="1" stroke-dasharray="6 5" />
+            </svg>
+        </div>
+        <div class="cv-content">
+            <svg class="gunungan" viewBox="0 0 120 170" aria-hidden="true">
+                <path d="M60 4C66 36 108 52 108 112C108 142 96 160 60 166C24 160 12 142 12 112C12 52 54 36 60 4Z"
+                    fill="url(#gGoldV)" stroke="#fffbe0" stroke-width="2" />
+                <path d="M60 24C64 46 92 60 92 110C92 134 84 146 60 150C36 146 28 134 28 110C28 60 56 46 60 24Z"
+                    fill="#241307" stroke="#5e3908" stroke-width="1.5" />
+                <path
+                    d="M60 140V70M60 118Q42 108 40 92M60 118Q78 108 80 92M60 100Q46 92 46 78M60 100Q74 92 74 78M60 84Q54 76 60 62Q66 76 60 84"
+                    fill="none" stroke="#fae078" stroke-width="2" stroke-linecap="round" />
+                <circle cx="60" cy="52" r="4" fill="#c2185b" />
+                <circle cx="40" cy="92" r="3" fill="#138a5b" />
+                <circle cx="80" cy="92" r="3" fill="#1b8fb0" />
+            </svg>
+            <p class="cv-kicker">Undangan Pernikahan</p>
+            <h2 class="cv-names">Aiga &amp; Ilham</h2>
+            <p class="cv-date">29 &amp; 30 November 2026</p>
+            <p class="cv-guest">Kepada Yth.<strong id="guestName">Bapak/Ibu/Saudara/i</strong></p>
+            <button class="cv-btn" id="openBtn" type="button">Buka Undangan</button>
+        </div>
+    </div>
+
+    <!-- ===== KARTU UNDANGAN ===== -->
+    <main class="invitation-card" id="cardStage">
+        <div class="foil-glare" id="foilGlare"></div>
+        <div class="sheen"></div>
+
+        <div class="paper">
+            <svg class="batik-wm" aria-hidden="true">
+                <rect width="100%" height="100%" fill="url(#pKawungGold)" />
+            </svg>
+
+            <div class="pillar pillar-l">
+                <svg aria-hidden="true">
+                    <rect width="100%" height="100%" fill="url(#gGoldH)" />
+                    <rect x="7" width="32" height="100%" fill="#fcf5e3" stroke="#7a5210" stroke-width="1.5" />
+                    <rect x="7" width="32" height="100%" fill="url(#pGeo)" />
+                </svg>
+            </div>
+            <div class="pillar pillar-r">
+                <svg aria-hidden="true">
+                    <rect width="100%" height="100%" fill="url(#gGoldH)" />
+                    <rect x="7" width="32" height="100%" fill="#fcf5e3" stroke="#7a5210" stroke-width="1.5" />
+                    <rect x="7" width="32" height="100%" fill="url(#pGeo)" />
+                </svg>
+            </div>
+
+            <!-- Mahkota emas -->
+            <svg class="crest" viewBox="0 0 360 96" aria-hidden="true">
+                <path
+                    d="M0 0H360C330 4 300 16 276 34C250 54 222 60 200 78C192 86 186 92 180 96C174 92 168 86 160 78C138 60 110 54 84 34C60 16 30 4 0 0Z"
+                    fill="url(#gGoldV)" stroke="#7a5210" stroke-width="1.6" />
+                <path
+                    d="M0 0H360C330 4 300 16 276 34C250 54 222 60 200 78C192 86 186 92 180 96C174 92 168 86 160 78C138 60 110 54 84 34C60 16 30 4 0 0Z"
+                    fill="url(#pFil)" />
+                <path d="M30 6C74 12 100 30 128 48C146 60 162 66 180 84" fill="none" stroke="#fffbe0"
+                    stroke-width="1.2" />
+                <path d="M330 6C286 12 260 30 232 48C214 60 198 66 180 84" fill="none" stroke="#fffbe0"
+                    stroke-width="1.2" />
+                <path d="M180 14L196 40L180 66L164 40Z" fill="#241307" stroke="#fae078" stroke-width="1.6" />
+                <circle class="gem-pulse" cx="180" cy="40" r="6" fill="#c2185b" stroke="#fffbe0" stroke-width="1.2" />
+                <circle cx="148" cy="40" r="3.6" fill="#138a5b" />
+                <circle cx="212" cy="40" r="3.6" fill="#1b8fb0" />
+            </svg>
+
+            <div class="corner corner-l"><svg viewBox="0 0 300 380" id="cornerL" aria-hidden="true"></svg></div>
+            <div class="corner corner-r"><svg viewBox="0 0 300 380" id="cornerR" aria-hidden="true"></svg></div>
+
+            <header class="royal-header js-reveal">
+                <div class="bismillah-calligraphy" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+                <div class="main-inv-title">UNDANGAN<br>PERNIKAHAN</div>
+                <svg class="title-underline-ornament" viewBox="0 0 220 18" fill="none" aria-hidden="true">
+                    <line x1="10" y1="9" x2="92" y2="9" stroke="#9e6b14" stroke-width="1.5" />
+                    <line x1="128" y1="9" x2="210" y2="9" stroke="#9e6b14" stroke-width="1.5" />
+                    <polygon points="110,2 118,9 110,16 102,9" fill="#d4af37" stroke="#5e3908" stroke-width="1.2" />
+                    <circle cx="110" cy="9" r="2.5" fill="#c2185b" />
+                    <circle cx="94" cy="9" r="2.5" fill="#138a5b" />
+                    <circle cx="126" cy="9" r="2.5" fill="#1b8fb0" />
+                </svg>
+            </header>
+
+            <section class="invitation-body">
+                <p class="sacred-verse js-reveal">
+                    Maha Suci Allah<br>
+                    yang telah menciptakan makhluk-Nya berpasang-pasangan<br>
+                    Ya Allah ijinkanlah putra-putri kami menikah :
+                </p>
+
+                <div class="js-reveal">
+                    <h1 class="royal-couple-name">Aiga Prastiwi, S.H., M.Kn</h1>
+                    <p class="parents-info">Putri Bapak H. Sugeng Priyanto, SP - Ibu Hj. Larasati, S.Pd</p>
+                    <p class="origin-info">Jebed Utara - Taman - Pemalang</p>
+                </div>
+
+                <div class="connector-wrap js-reveal">
+                    <span class="connector-line"></span>
+                    <em>dengan</em>
+                    <span class="connector-line right"></span>
+                </div>
+
+                <div class="js-reveal">
+                    <h1 class="royal-couple-name">Ilham Abdul Aziz, S.Kom</h1>
+                    <p class="parents-info">Putra Bapak Ismangil, S.Pd,. S.Kom - Ibu Endah Winarni Suratno Putri</p>
+                    <p class="origin-info">Gedanganak - Ungaran Timur - Kabupaten Semarang</p>
+                </div>
+
+                <div class="js-reveal">
+                    <div class="akad-banner">
+                        <h2>Akad Nikah</h2>
+                    </div>
+                    <p class="akad-details">
+                        Hari Minggu | Tanggal 29 November 2026<br>
+                        Pukul 10.00 WIB | di Rumah Mempelai Putri
+                    </p>
+                </div>
+
+                <div class="ornament-sep js-reveal"></div>
+
+                <div class="js-reveal">
+                    <p class="date-stamp">Jebed Utara, 30 November 2026</p>
+                    <p class="salam-text">Assalamu'alaikum Wr. Wb.</p>
+                    <p class="resepsi-intro">
+                        Dengan memohon rahmat dan ridho Allah SWT Kami bermaksud menyelenggarakan<br>
+                        Resepsi Pernikahan Putra - Putri kami yang Insya Allah akan dilaksanakan pada :
+                    </p>
+                </div>
+
+                <div class="resepsi-row js-reveal">
+                    <div class="medallion-wrap">
+                        <div class="med-ring r1"></div>
+                        <div class="med-ring r2"></div>
+                        <div class="medallion-date">
+                            <span class="med-top">RESEPSI</span>
+                            <span class="med-day">SENIN</span>
+                            <span class="med-num">30</span>
+                            <span class="med-month">NOVEMBER<br>2026</span>
+                        </div>
+                    </div>
+
+                    <div class="v-divider"></div>
+
+                    <div class="venue-box">
+                        <p class="venue-time">Jam 11.00 WIB - SELESAI</p>
+                        <p class="venue-addr">
+                            Jl. Raya Jebed Utara RT 004 RW 005<br>
+                            Taman - Pemalang
+                        </p>
+                    </div>
+                </div>
+
+                <div class="countdown js-reveal">
+                    <p class="cd-title">Menuju Hari Bahagia</p>
+                    <div class="cd-row">
+                        <div class="cd-box"><span id="cdD">00</span><small>Hari</small></div>
+                        <div class="cd-box"><span id="cdH">00</span><small>Jam</small></div>
+                        <div class="cd-box"><span id="cdM">00</span><small>Menit</small></div>
+                        <div class="cd-box"><span id="cdS">00</span><small>Detik</small></div>
+                    </div>
+                    <p class="cd-note" id="cdNote">Akad Nikah, Minggu 29 November 2026 pukul 10.00 WIB</p>
+                </div>
+
+                <div class="actions js-reveal">
+                    <button class="btn-gold" id="btnLokasi" type="button" aria-haspopup="dialog">Lihat Lokasi</button>
+                </div>
+
+                <div class="js-reveal">
+                    <p class="closing-verse">
+                        Merupakan suatu kebahagiaan bagi kami apabila Bpk/Ibu/Saudara berkenan hadir untuk memberikan
+                        do'a restunya, atas kehadiran dan do'a restunya kami ucapkan terima kasih.
+                    </p>
+                    <p class="salam-text">Wassalamu'alaikum Wr. Wb.</p>
+                </div>
+
+                <div class="js-reveal">
+                    <p class="regards-label">Hormat Kami</p>
+                    <p class="parents-host">H. SUGENG PRIYANTO, SP. dan Hj. LARASATI, S.Pd</p>
+                    <p class="segenap-keluarga">SEGENAP KELUARGA</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- ===== PANGGUNG: JOGLO DI TEPI AIR, PAYUNG AGUNG, BATIK ===== -->
+        <div class="scene" aria-hidden="true">
+            <svg class="scene-bg" viewBox="0 0 720 430" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="skyG" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#f7ecd6" stop-opacity="0" />
+                        <stop offset=".55" stop-color="#f6dfa6" stop-opacity=".7" />
+                        <stop offset="1" stop-color="#f3cd7a" stop-opacity=".95" />
+                    </linearGradient>
+                    <radialGradient id="sunG">
+                        <stop offset="0" stop-color="#fffbe0" stop-opacity=".95" />
+                        <stop offset=".5" stop-color="#fae078" stop-opacity=".45" />
+                        <stop offset="1" stop-color="#fae078" stop-opacity="0" />
+                    </radialGradient>
+                    <radialGradient id="lampG">
+                        <stop offset="0" stop-color="#fff3b0" stop-opacity=".95" />
+                        <stop offset="1" stop-color="#ffd36b" stop-opacity="0" />
+                    </radialGradient>
+                    <linearGradient id="fadeG" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#000" />
+                        <stop offset=".35" stop-color="#fff" />
+                        <stop offset="1" stop-color="#fff" />
+                    </linearGradient>
+                    <mask id="fadeTop">
+                        <rect width="720" height="430" fill="url(#fadeG)" />
+                    </mask>
+                    <linearGradient id="waterG" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#bcd6cf" />
+                        <stop offset=".5" stop-color="#7aa6a4" />
+                        <stop offset="1" stop-color="#3f6e73" />
+                    </linearGradient>
+                    <linearGradient id="roofG" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stop-color="#8a5a2b" />
+                        <stop offset="1" stop-color="#3a1f0c" />
+                    </linearGradient>
+                    <linearGradient id="woodG" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0" stop-color="#4a2810" />
+                        <stop offset=".5" stop-color="#7a4a22" />
+                        <stop offset="1" stop-color="#3a1f0c" />
+                    </linearGradient>
+                    <pattern id="pShingle" width="12" height="7" patternUnits="userSpaceOnUse">
+                        <path d="M0 7Q6 0 12 7" fill="none" stroke="#e6c46a" stroke-width=".7" opacity=".55" />
+                    </pattern>
+                </defs>
+
+                <rect width="720" height="300" fill="url(#skyG)" />
+
+                <g mask="url(#fadeTop)">
+                    <circle cx="360" cy="195" r="140" fill="url(#sunG)" />
+                    <g class="rays" id="rays" fill="#fff3b0" opacity=".22"></g>
+                    <g class="cloud" style="--d:0">
+                        <g fill="#fffaf0" opacity=".85">
+                            <ellipse cx="120" cy="92" rx="38" ry="11" />
+                            <ellipse cx="146" cy="84" rx="26" ry="11" />
+                            <ellipse cx="100" cy="86" rx="22" ry="9" />
+                        </g>
+                    </g>
+                    <g class="cloud" style="--d:9">
+                        <g fill="#fffaf0" opacity=".8">
+                            <ellipse cx="590" cy="120" rx="42" ry="12" />
+                            <ellipse cx="616" cy="111" rx="26" ry="11" />
+                            <ellipse cx="566" cy="113" rx="22" ry="9" />
+                        </g>
+                    </g>
+                    <g class="cloud" style="--d:15">
+                        <g fill="#fffaf0" opacity=".7">
+                            <ellipse cx="400" cy="62" rx="34" ry="9" />
+                            <ellipse cx="424" cy="55" rx="22" ry="9" />
+                        </g>
+                    </g>
+                    <g transform="translate(0 70)">
+                        <g class="bird" style="--d:0">
+                            <path d="M0 0Q6 -7 12 0Q18 -7 24 0" fill="none" stroke="#5e3908" stroke-width="1.6"
+                                stroke-linecap="round" />
+                        </g>
+                    </g>
+                    <g transform="translate(0 100)">
+                        <g class="bird" style="--d:8">
+                            <path d="M0 0Q6 -7 12 0Q18 -7 24 0" fill="none" stroke="#5e3908" stroke-width="1.4"
+                                stroke-linecap="round" />
+                        </g>
+                    </g>
+                    <g transform="translate(0 52)">
+                        <g class="bird" style="--d:17">
+                            <path d="M0 0Q6 -7 12 0Q18 -7 24 0" fill="none" stroke="#5e3908" stroke-width="1.3"
+                                stroke-linecap="round" />
+                        </g>
+                    </g>
+                </g>
+
+                <!-- Bukit -->
+                <path d="M0 262Q90 222 180 250T360 244T540 252T720 232V310H0Z" fill="#9fb38a" opacity=".6" />
+                <path d="M0 286Q120 248 240 274T480 270T720 262V312H0Z" fill="#7e9a6a" opacity=".85" />
+
+                <g id="trees"></g>
+
+                <!-- Air -->
+                <rect x="0" y="296" width="720" height="134" fill="url(#waterG)" />
+                <ellipse cx="360" cy="352" rx="150" ry="14" fill="#fae078" opacity=".28" class="glow" />
+                <g id="ripples"></g>
+
+                <!-- Pulau kecil -->
+                <path d="M170 336Q360 306 550 336Q520 360 360 364Q200 360 170 336Z" fill="#5d7d4b" stroke="#3f5e34"
+                    stroke-width="1.5" />
+                <g fill="#4f7040">
+                    <circle cx="196" cy="338" r="10" />
+                    <circle cx="214" cy="344" r="8" />
+                    <circle cx="524" cy="338" r="10" />
+                    <circle cx="506" cy="344" r="8" />
+                </g>
+
+                <!-- ===== RUMAH JOGLO ===== -->
+                <g id="houseMain">
+                    <g fill="#4a2810" stroke="#241307" stroke-width=".6">
+                        <rect x="232" y="300" width="7" height="36" />
+                        <rect x="272" y="300" width="7" height="36" />
+                        <rect x="312" y="300" width="7" height="36" />
+                        <rect x="402" y="300" width="7" height="36" />
+                        <rect x="442" y="300" width="7" height="36" />
+                        <rect x="482" y="300" width="7" height="36" />
+                    </g>
+                    <path d="M232 318H489" stroke="#6b3f1a" stroke-width="2" />
+                    <rect x="222" y="292" width="276" height="10" fill="url(#woodG)" stroke="#fae078"
+                        stroke-width=".9" />
+                    <rect x="222" y="300" width="276" height="2.5" fill="#fae078" />
+
+                    <rect x="250" y="236" width="220" height="56" fill="#2a1608" />
+                    <g class="win">
+                        <rect x="262" y="250" width="50" height="30" fill="#ffd36b" stroke="#fae078"
+                            stroke-width="1.4" />
+                        <path d="M262 260H312M262 270H312M279 250V280M296 250V280" stroke="#7a4a1a"
+                            stroke-width="1.2" />
+                    </g>
+                    <g class="win">
+                        <rect x="408" y="250" width="50" height="30" fill="#ffd36b" stroke="#fae078"
+                            stroke-width="1.4" />
+                        <path d="M408 260H458M408 270H458M425 250V280M442 250V280" stroke="#7a4a1a"
+                            stroke-width="1.2" />
+                    </g>
+                    <rect x="330" y="240" width="60" height="52" fill="#1b0e05" stroke="#fae078" stroke-width="1.6" />
+                    <path d="M360 240V292" stroke="#fae078" stroke-width="1.4" />
+                    <path d="M336 252H354M336 262H354M336 272H354M366 252H384M366 262H384M366 272H384" stroke="#d4af37"
+                        stroke-width="1" />
+                    <circle cx="355" cy="268" r="2.4" fill="#e08a00" />
+                    <circle cx="365" cy="268" r="2.4" fill="#e08a00" />
+                    <path d="M330 240Q360 224 390 240" fill="none" stroke="#fae078" stroke-width="1.6" />
+
+                    <g id="pillars"></g>
+                    <g id="rails"></g>
+
+                    <!-- Atap penanggap -->
+                    <path d="M186 236Q228 230 262 206H458Q492 230 534 236Z" fill="url(#roofG)" stroke="#fae078"
+                        stroke-width="1.6" />
+                    <path d="M186 236Q228 230 262 206H458Q492 230 534 236Z" fill="url(#pShingle)" />
+                    <rect x="186" y="234" width="348" height="5" fill="url(#gGold)" stroke="#5e3908"
+                        stroke-width=".8" />
+                    <g id="eave" fill="#fae078" stroke="#5e3908" stroke-width=".5"></g>
+                    <!-- Atap brunjung -->
+                    <path d="M278 210Q318 204 332 176H388Q402 204 442 210Z" fill="url(#roofG)" stroke="#fae078"
+                        stroke-width="1.6" />
+                    <path d="M278 210Q318 204 332 176H388Q402 204 442 210Z" fill="url(#pShingle)" />
+                    <path d="M310 178L340 156H380L410 178Z" fill="url(#roofG)" stroke="#fae078" stroke-width="1.6" />
+                    <path d="M310 178L340 156H380L410 178Z" fill="url(#pShingle)" />
+                    <path d="M360 124L367 156H353Z" fill="url(#gGoldV)" stroke="#5e3908" stroke-width="1" />
+                    <circle cx="360" cy="154" r="5" fill="#c2185b" stroke="#fffbe0" stroke-width="1.2" />
+                    <g fill="#fae078" stroke="#5e3908" stroke-width=".8">
+                        <circle cx="262" cy="206" r="3.5" />
+                        <circle cx="458" cy="206" r="3.5" />
+                        <circle cx="332" cy="176" r="3.2" />
+                        <circle cx="388" cy="176" r="3.2" />
+                    </g>
+
+                    <!-- Lampu gantung -->
+                    <g>
+                        <circle class="glow" cx="316" cy="254" r="20" fill="url(#lampG)" />
+                        <path d="M316 239V247" stroke="#fae078" />
+                        <ellipse cx="316" cy="254" rx="5" ry="7" fill="#ffd36b" stroke="#fae078" />
+                        <circle class="glow" cx="404" cy="254" r="20" fill="url(#lampG)"
+                            style="animation-delay:-1.4s" />
+                        <path d="M404 239V247" stroke="#fae078" />
+                        <ellipse cx="404" cy="254" rx="5" ry="7" fill="#ffd36b" stroke="#fae078" />
+                    </g>
+
+                    <!-- Tangga -->
+                    <g fill="#7a4c22" stroke="#fae078" stroke-width=".6">
+                        <rect x="335" y="302" width="50" height="6" />
+                        <rect x="332" y="308" width="56" height="6" />
+                        <rect x="329" y="314" width="62" height="6" />
+                        <rect x="326" y="320" width="68" height="6" />
+                        <rect x="323" y="326" width="74" height="6" />
+                    </g>
+                    <path d="M333 300L321 332M387 300L399 332" stroke="#fae078" stroke-width="1.6" />
+                </g>
+
+                <g fill="#5d7d4b" stroke="#3f5e34" stroke-width="1">
+                    <circle cx="300" cy="350" r="9" />
+                    <circle cx="316" cy="354" r="7" />
+                    <circle cx="420" cy="350" r="9" />
+                    <circle cx="404" cy="354" r="7" />
+                </g>
+
+                <g id="flies"></g>
+
+                <!-- Banner -->
+                <g>
+                    <rect x="228" y="378" width="264" height="34" rx="5" fill="#3b200c" stroke="#fae078"
+                        stroke-width="1.8" />
+                    <rect x="234" y="383" width="252" height="24" rx="3" fill="none" stroke="#9e6b14" stroke-width="1"
+                        stroke-dasharray="4 3" />
+                    <clipPath id="banClip">
+                        <rect x="228" y="378" width="264" height="34" rx="5" />
+                    </clipPath>
+                    <g clip-path="url(#banClip)">
+                        <rect class="banner-shine" x="228" y="378" width="46" height="34" fill="#fffbe0" opacity=".28"
+                            transform="skewX(-20)" />
+                    </g>
+                    <text x="360" y="400" text-anchor="middle" fill="url(#gGold)"
+                        font-family="'Cinzel Decorative', serif" font-size="14" font-weight="900"
+                        letter-spacing="3">PAWIWAHAN AGUNG</text>
+                    <circle cx="244" cy="395" r="3.5" fill="#c2185b" />
+                    <circle cx="476" cy="395" r="3.5" fill="#1b8fb0" />
+                </g>
+            </svg>
+
+            <div class="payung payung-l" id="payL"></div>
+            <div class="payung payung-r" id="payR"></div>
+
+            <svg class="sogan-c sogan-c-l" viewBox="0 0 260 220" id="sgL"></svg>
+            <svg class="sogan-c sogan-c-r" viewBox="0 0 260 220" id="sgR"></svg>
+
+            <div class="pf pf-l"><svg viewBox="0 0 200 260" id="pfL"></svg></div>
+            <div class="pf pf-r"><svg viewBox="0 0 200 260" id="pfR"></svg></div>
+        </div>
+    </main>
+
+    <div class="map-modal" id="mapModal" role="dialog" aria-modal="true" aria-label="Lokasi">
+        <div class="map-box">
+            <div class="map-head"><span>LOKASI</span><button class="map-close" id="mapClose" type="button"
+                    aria-label="Tutup">&times;</button></div>
+            <iframe id="mapFrame" title="Peta lokasi" allowfullscreen
+                referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <div class="map-foot"><a class="btn-gold" id="mapOpen" target="_blank" rel="noopener" href="#">Buka di
+                    Google Maps</a></div>
+        </div>
+    </div>
+
+    <!-- Audio Latar & Kontrol Musik -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-btn" id="musicBtn" type="button" aria-label="Putar Musik" title="Musik Latar">
+        <svg class="icon-play music-icon-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13" />
+            <circle cx="6" cy="18" r="3" fill="currentColor" />
+            <circle cx="18" cy="16" r="3" fill="currentColor" />
+        </svg>
+        <svg class="icon-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18V5l12-2v13" opacity=".5" />
+            <circle cx="6" cy="18" r="3" fill="currentColor" opacity=".5" />
+            <circle cx="18" cy="16" r="3" fill="currentColor" opacity=".5" />
+            <line x1="2" y1="2" x2="22" y2="22" stroke="#c2185b" stroke-width="2.5" />
+        </svg>
+    </button>
+
+    <script>
+        (function () {
+            const $ = (s) => document.querySelector(s);
+            const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const root = document.documentElement;
+
+            /* ====== PENGATURAN LOKASI ====== */
+            const LOKASI_EMBED = 'https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d673.5195622083412!2d109.41226567231936!3d-6.92468864371777!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNsKwNTUnMjcuMiJTIDEwOcKwMjQnNDQuMSJF!5e1!3m2!1sid!2sid!4v1795152752054!5m2!1sid!2sid';
+            const LOKASI_MAPS = 'https://www.google.com/maps/search/?api=1&query=-6.92468864371777,109.41226567231936';
+            const mapModal = $('#mapModal'), mapFrame = $('#mapFrame');
+            $('#mapOpen').href = LOKASI_MAPS;
+            function openMap() {
+                if (!mapFrame.getAttribute('src')) mapFrame.src = LOKASI_EMBED;
+                mapModal.classList.add('show');
+            }
+            function closeMap() { mapModal.classList.remove('show'); }
+            $('#btnLokasi').addEventListener('click', openMap);
+            $('#mapClose').addEventListener('click', closeMap);
+            mapModal.addEventListener('click', (e) => { if (e.target === mapModal) closeMap(); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMap(); });
+
+            /* ========== 1. BENTUK BUNGA, DAUN ========== */
+            const pet = (a) => a.map(r => `<use href="#petal" transform="rotate(${r})"/>`).join('');
+            let stam = '';
+            for (let a = 0; a < 360; a += 30) {
+                stam += `<g transform="rotate(${a})"><path d="M0 -6V-14" stroke="#b8861e" stroke-width=".8"/><circle cy="-15.2" r="1.7" fill="#d4af37" stroke="#7a5210" stroke-width=".4"/></g>`;
+            }
+            const core = `<circle r="6.6" fill="url(#gCenter)" stroke="#9e6b14" stroke-width=".8"/>`;
+            const five = [0, 72, 144, 216, 288];
+            const leafBody = (g) => `<path d="M0 0C17 -14 19 -48 0 -72C-19 -48 -17 -14 0 0Z" fill="url(#${g})" stroke="#cfd9a8" stroke-width=".7"/><path d="M0 -2V-64" stroke="#e3ecc4" stroke-width=".8" opacity=".85"/><path d="M0 -16L-9 -26M0 -28L9 -38M0 -40L-8 -50M0 -16L9 -26M0 -28L-9 -38M0 -40L8 -50" stroke="#e3ecc4" stroke-width=".5" opacity=".7" fill="none"/>`;
+            $('#shapes').innerHTML = `
+                <g id="petal"><path d="M0 0C-17 -10 -21 -34 0 -47C21 -34 17 -10 0 0Z" fill="url(#gPetal)" stroke="#d3ad55" stroke-width=".9"/><path d="M0 -5V-34" stroke="#e4c97f" stroke-width=".7" fill="none"/><path d="M-5 -14Q-9 -24 -6 -34M5 -14Q9 -24 6 -34" stroke="#ecd9a2" stroke-width=".5" fill="none"/></g>
+                <g id="flower">${pet(five)}${stam}${core}</g>
+                <g id="flower2"><g transform="rotate(36) scale(1.08)">${pet(five)}</g>${pet(five)}<g transform="scale(.62) rotate(36)">${pet(five)}</g>${stam}${core}</g>
+                <g id="bud"><path d="M0 0C-9 -8 -9 -26 0 -34C9 -26 9 -8 0 0Z" fill="url(#gPetal)" stroke="#d3ad55" stroke-width=".8"/><path d="M0 -4V-26" stroke="#e4c97f" stroke-width=".6"/></g>
+                <g id="leaf">${leafBody('gLeaf')}</g>
+                <g id="leafD">${leafBody('gLeafD')}</g>`;
+
+            const F = (x, y, s, r, d, t = 'flower') => `<g class="fl" style="transform-origin:${x}px ${y}px;--d:${d}"><use href="#${t}" transform="translate(${x} ${y}) rotate(${r}) scale(${(s / 92).toFixed(3)})"/></g>`;
+            const L = (x, y, r, k, d, t = 'leaf') => `<g class="lf" style="transform-origin:${x}px ${y}px;--d:${d}"><use href="#${t}" transform="translate(${x} ${y}) rotate(${r}) scale(${k})"/></g>`;
+            const S = (x, y, len, d, gem = '#c2185b') => {
+                let b = '';
+                for (let t = 12; t < len - 22; t += 12) {
+                    const big = (t / 12) % 2 === 0;
+                    b += `<circle cx="${x}" cy="${y + t}" r="${big ? 3.4 : 2.4}" fill="url(#gGold)" stroke="#7a5210" stroke-width=".5"/>`;
+                }
+                const e = y + len;
+                return `<g class="swing" style="transform-origin:${x}px ${y}px;--d:${d}"><path d="M${x} ${y}V${e - 20}" stroke="#b8861e" stroke-width="1"/>${b}<circle cx="${x}" cy="${e - 18}" r="4.2" fill="${gem}" stroke="#fae078" stroke-width="1"/><path d="M${x - 5} ${e - 13}Q${x} ${e - 9} ${x + 5} ${e - 13}L${x + 7} ${e + 6}H${x - 7}Z" fill="url(#gGold)" stroke="#7a5210" stroke-width=".7"/><path d="M${x - 6} ${e + 6}V${e + 20}M${x - 3} ${e + 6}V${e + 23}M${x} ${e + 6}V${e + 25}M${x + 3} ${e + 6}V${e + 23}M${x + 6} ${e + 6}V${e + 20}" stroke="#d4af37" stroke-width="1.2" stroke-linecap="round"/></g>`;
+            };
+
+            /* Gugusan bunga sudut atas */
+            const filigD = 'M0 0H300C252 4 216 18 188 42C152 74 120 86 82 122C48 154 32 200 0 236Z';
+            function topCluster(off) {
+                let s = `<path d="${filigD}" fill="url(#gGoldV)" opacity=".5"/><path d="${filigD}" fill="url(#pFil)" opacity=".8"/>
+                    <path d="M0 236C32 200 48 154 82 122C120 86 152 74 188 42C216 18 252 4 300 0" fill="none" stroke="#9e6b14" stroke-width="1.8"/>
+                    <path d="M0 214C26 184 40 142 74 110C112 74 146 62 180 34C206 14 244 2 290 0" fill="none" stroke="#fae078" stroke-width="1"/>`;
+                const leaves = [[112, 102, 96, 1.5], [120, 88, 58, 1.35], [104, 124, 152, 1.5], [92, 134, 186, 1.7], [72, 150, 204, 1.35], [134, 66, 28, 1.3], [160, 76, 78, 1.25, 'leafD'], [150, 150, 122, 1.35, 'leafD'], [52, 206, 164, 1.15], [62, 222, 192, 1.2, 'leafD'], [196, 44, 72, 1.05], [236, 40, 96, .95, 'leafD'], [208, 78, 116, 1.05], [30, 128, 176, 1.2], [176, 110, 100, 1.1, 'leafD'], [100, 190, 150, 1.0]];
+                leaves.forEach((l, i) => { s += L(l[0], l[1], l[2], l[3], (off + i * .06).toFixed(2), l[4]); });
+                const fl = [[88, 94, 162, 10, 'flower2'], [208, 54, 104, -14, 'flower'], [40, 190, 100, 20, 'flower'], [150, 172, 86, 40, 'flower2'], [262, 96, 58, 25, 'flower'], [88, 254, 64, 10, 'flower'], [148, 34, 60, -10, 'flower'], [242, 152, 42, 0, 'flower'], [120, 228, 44, 15, 'flower'], [196, 128, 70, 50, 'bud'], [60, 138, 70, -30, 'bud'], [268, 52, 60, 70, 'bud']];
+                fl.forEach((f, i) => { s += F(f[0], f[1], f[2], f[3], (off + .3 + i * .09).toFixed(2), f[4]); });
+                s += S(22, 240, 120, (off + .2).toFixed(2), '#c2185b');
+                s += S(116, 266, 86, (off + 1.1).toFixed(2), '#138a5b');
+                s += S(250, 126, 100, (off + 2).toFixed(2), '#1b8fb0');
+                s += S(176, 214, 70, (off + 2.6).toFixed(2), '#e08a00');
+                return s;
+            }
+            $('#cornerL').innerHTML = topCluster(0);
+            $('#cornerR').innerHTML = topCluster(.5);
+
+            /* Bunga di dasar payung */
+            function bottomCluster(off) {
+                let s = '';
+                [[100, 240, -30, 1.5], [100, 240, 10, 1.6], [100, 240, 40, 1.4], [70, 250, -60, 1.3, 'leafD'], [130, 250, 60, 1.3, 'leafD'], [40, 230, -15, 1.1], [160, 230, 25, 1.1, 'leafD']]
+                    .forEach((l, i) => { s += L(l[0], l[1], l[2], l[3], (off + i * .07).toFixed(2), l[4]); });
+                [[56, 214, 84, 0, 'flower2'], [132, 200, 70, 20, 'flower'], [96, 170, 58, -20, 'flower'], [160, 236, 56, 0, 'flower'], [26, 160, 48, 15, 'flower'], [84, 120, 50, 60, 'bud']]
+                    .forEach((f, i) => { s += F(f[0], f[1], f[2], f[3], (off + .4 + i * .1).toFixed(2), f[4]); });
+                return s;
+            }
+            $('#pfL').innerHTML = bottomCluster(0);
+            $('#pfR').innerHTML = bottomCluster(.6);
+
+            /* ========== 2. PAYUNG AGUNG ========== */
+            function payung(finial) {
+                const gem = ['#c2185b', '#138a5b', '#e08a00', '#1b8fb0'];
+                let fr = '';
+                for (let i = 0, x = 14; x <= 186; x += 14, i++) {
+                    fr += `<g class="swing" style="transform-origin:${x}px 118px;--d:${(i * .37).toFixed(2)}"><path d="M${x} 118V136" stroke="#9e6b14" stroke-width="1.6"/><circle cx="${x}" cy="140" r="3.2" fill="${gem[i % 4]}" stroke="#fae078" stroke-width=".8"/><path d="M${x} 144V154" stroke="#d4af37" stroke-width="1.8" stroke-linecap="round"/><circle cx="${x}" cy="156" r="1.8" fill="#fae078"/></g>`;
+                }
+                return `<svg viewBox="0 0 200 300">
+                    <g class="cloth" style="transform-origin:100px 156px"><path d="M100 156C80 164 62 204 50 296H106Z" fill="url(#pBatik)" stroke="#fae078" stroke-width="1.4"/><path d="M50 296H106" stroke="#fae078" stroke-width="3" stroke-dasharray="2 3"/></g>
+                    <g class="cloth c2" style="transform-origin:100px 156px"><path d="M100 156C120 164 138 204 150 296H94Z" fill="url(#pBatik)" stroke="#fae078" stroke-width="1.4"/><path d="M94 296H150" stroke="#fae078" stroke-width="3" stroke-dasharray="2 3"/></g>
+                    <rect x="97" y="26" width="6" height="274" rx="3" fill="url(#gGoldH)"/>
+                    <circle cx="100" cy="150" r="5.5" fill="url(#gGold)" stroke="#5e3908" stroke-width=".8"/>
+                    <circle cx="100" cy="212" r="5.5" fill="url(#gGold)" stroke="#5e3908" stroke-width=".8"/>
+                    <circle cx="100" cy="264" r="5.5" fill="url(#gGold)" stroke="#5e3908" stroke-width=".8"/>
+                    <path d="M8 112Q100 -64 192 112Q171 126 150 112Q125 126 100 112Q75 126 50 112Q29 126 8 112Z" fill="url(#gUmb)" stroke="#472710" stroke-width="2"/>
+                    <path d="M100 26L29 119M100 26L75 119M100 26L125 119M100 26L171 119" stroke="#7a5210" stroke-width="1.2" opacity=".7"/>
+                    <path d="M22 98Q100 -30 178 98" fill="none" stroke="#fffbe0" stroke-width="1.6" opacity=".85"/>
+                    <path d="M40 84Q100 -2 160 84" fill="none" stroke="#5e3908" stroke-width="1.2" stroke-dasharray="2 3"/>
+                    <circle class="twinkle" style="--d:0" cx="64" cy="76" r="3" fill="#fffbe0"/>
+                    <circle class="twinkle" style="--d:.8" cx="100" cy="52" r="3" fill="#fffbe0"/>
+                    <circle class="twinkle" style="--d:1.6" cx="138" cy="76" r="3" fill="#fffbe0"/>
+                    <polygon points="100,6 107,26 93,26" fill="#fffbe0" stroke="#5e3908" stroke-width="1.2"/>
+                    <circle cx="100" cy="26" r="5" fill="${finial}" stroke="#fae078"/>
+                    ${fr}
+                </svg>`;
+            }
+            $('#payL').innerHTML = payung('#c2185b');
+            $('#payR').innerHTML = payung('#1b8fb0');
+
+            /* Ornamen sogan sudut bawah */
+            const cornerD = 'M0 60C28 52 48 30 72 44C92 56 96 84 122 98C150 112 170 132 184 160C196 186 226 204 260 220H0Z';
+            const sogan = `<path d="${cornerD}" fill="url(#gSogan)" stroke="#fae078" stroke-width="3"/><path d="${cornerD}" fill="url(#pKawungGold)" opacity=".55"/>
+                <path d="M0 84C26 78 44 60 66 70C84 80 88 104 112 118C138 132 156 152 168 178C178 198 204 212 232 220" fill="none" stroke="#d4af37" stroke-width="1.6" stroke-dasharray="5 4"/>
+                <g fill="none" stroke="#fae078" stroke-width="2.2" stroke-linecap="round">
+                    <path d="M18 200C4 176 28 150 50 164C68 176 60 198 44 194"/>
+                    <path d="M62 206C60 184 82 170 98 182C110 192 104 208 92 206"/>
+                    <path d="M30 128C26 112 42 102 54 110C62 116 58 128 50 126"/>
+                    <path d="M120 196C130 178 154 180 156 196C158 208 146 214 138 208"/>
+                </g>
+                <g fill="#d4af37" stroke="#5e3908" stroke-width=".6">
+                    <path d="M70 168Q82 150 98 154Q92 170 70 168Z"/>
+                    <path d="M20 160Q30 142 44 144Q40 158 20 160Z"/>
+                    <path d="M100 150Q112 134 126 140Q120 154 100 150Z"/>
+                </g>
+                <circle cx="50" cy="164" r="4.5" fill="#c2185b" stroke="#fffbe0" stroke-width="1"/>
+                <circle cx="98" cy="182" r="4" fill="#138a5b" stroke="#fffbe0" stroke-width="1"/>
+                <circle cx="54" cy="110" r="3.6" fill="#e08a00" stroke="#fffbe0" stroke-width="1"/>
+                <circle cx="156" cy="196" r="3.6" fill="#1b8fb0" stroke="#fffbe0" stroke-width="1"/>
+                <circle class="twinkle" style="--d:.4" cx="30" cy="190" r="2.2" fill="#fffbe0"/>
+                <circle class="twinkle" style="--d:1.4" cx="110" cy="206" r="2.2" fill="#fffbe0"/>
+                <circle class="twinkle" style="--d:2.2" cx="72" cy="90" r="2.2" fill="#fffbe0"/>`;
+            $('#sgL').innerHTML = sogan;
+            $('#sgR').innerHTML = sogan;
+
+            /* ========== 3. ELEMEN SCENE (sinar, pohon, palem, joglo) ========== */
+            let rays = '';
+            for (let i = 0; i < 18; i++) {
+                const a = i * 20 * Math.PI / 180, w = 4.5 * Math.PI / 180, R = 360;
+                rays += `<path d="M360 195L${(360 + R * Math.sin(a - w)).toFixed(1)} ${(195 - R * Math.cos(a - w)).toFixed(1)}L${(360 + R * Math.sin(a + w)).toFixed(1)} ${(195 - R * Math.cos(a + w)).toFixed(1)}Z"/>`;
+            }
+            $('#rays').innerHTML = rays;
+
+            const tree = (x, y, s, d, c1, c2) => `<g class="tree" style="transform-origin:${x}px ${y}px;--d:${d}"><rect x="${x - 3 * s}" y="${y - 34 * s}" width="${6 * s}" height="${34 * s}" fill="#5a3a1c"/><circle cx="${x}" cy="${y - 48 * s}" r="${26 * s}" fill="${c1}"/><circle cx="${x - 20 * s}" cy="${y - 36 * s}" r="${19 * s}" fill="${c2}"/><circle cx="${x + 21 * s}" cy="${y - 38 * s}" r="${20 * s}" fill="${c2}"/><circle cx="${x + 4 * s}" cy="${y - 62 * s}" r="${17 * s}" fill="${c1}"/></g>`;
+            const palm = (x, y, s, f, d) => {
+                const tx = x + 8 * s * f, ty = y - 112 * s;
+                let fr = '';
+                [-165, -130, -95, -60, -25, 10].forEach((a, i) => {
+                    fr += `<g class="frond" style="transform-origin:${tx}px ${ty}px;--d:${(d + i * .4).toFixed(1)}"><path transform="translate(${tx} ${ty}) rotate(${a}) scale(${(s * .95).toFixed(2)})" d="M0 0C20 -22 52 -18 74 10C50 -2 24 -4 0 0Z" fill="#4c7a43" stroke="#2f4a2a" stroke-width=".6"/></g>`;
+                });
+                return `<path d="M${x} ${y}Q${x + 18 * s * f} ${y - 50 * s} ${tx} ${ty}" fill="none" stroke="#6b4423" stroke-width="${6 * s}" stroke-linecap="round"/>${fr}<circle cx="${tx - 3}" cy="${ty + 5}" r="${3.2 * s}" fill="#6b4423"/><circle cx="${tx + 4}" cy="${ty + 6}" r="${3.2 * s}" fill="#6b4423"/>`;
+            };
+            $('#trees').innerHTML =
+                tree(120, 296, .8, 1, '#6f8b5a', '#5a7a4c') + tree(600, 296, .8, 3, '#6f8b5a', '#5a7a4c') +
+                tree(196, 304, 1, 0, '#6f8b5a', '#86a06e') + tree(524, 304, 1, 2, '#6f8b5a', '#86a06e') +
+                palm(166, 306, .9, -1, 0) + palm(554, 306, .9, 1, 1);
+
+            let rp = '';
+            [[60, 318], [150, 330], [250, 352], [450, 356], [560, 332], [650, 320], [90, 360], [610, 362], [330, 372], [400, 372], [30, 345], [690, 348]].forEach((p, i) => {
+                rp += `<path class="rip" style="--d:${i * .7}" d="M${p[0]} ${p[1]}q10 -3 20 0t20 0"/>`;
+            });
+            $('#ripples').innerHTML = rp;
+
+            let pil = '';
+            [244, 290, 320, 392, 422, 468].forEach(x => {
+                pil += `<rect x="${x}" y="226" width="8" height="66" fill="url(#woodG)" stroke="#fae078" stroke-width=".8"/><rect x="${x - 3}" y="224" width="14" height="6" fill="#fae078" stroke="#5e3908" stroke-width=".6"/>`;
+            });
+            $('#pillars').innerHTML = pil;
+
+            let rl = '<rect x="236" y="274" width="94" height="3" fill="#fae078"/><rect x="390" y="274" width="94" height="3" fill="#fae078"/><g stroke="#e3b94f" stroke-width="1.4">';
+            for (let x = 240; x <= 328; x += 8) rl += `<path d="M${x} 277V292"/>`;
+            for (let x = 394; x <= 482; x += 8) rl += `<path d="M${x} 277V292"/>`;
+            $('#rails').innerHTML = rl + '</g>';
+
+            let ev = '';
+            for (let x = 190; x < 534; x += 11) ev += `<path d="M${x} 239l5.5 8l5.5 -8z"/>`;
+            $('#eave').innerHTML = ev;
+
+            let ff = '';
+            for (let i = 0; i < 14; i++) {
+                const x = 190 + (i * 97) % 340, y = 150 + (i * 53) % 170;
+                ff += `<circle class="ff" style="--d:${(i * .9).toFixed(1)}" cx="${x}" cy="${y}" r="4" fill="url(#lampG)"/>`;
+            }
+            $('#flies').innerHTML = ff;
+
+            /* ========== 4. COVER & BUKA UNDANGAN ========== */
+            try {
+                const to = new URLSearchParams(location.search).get('to');
+                if (to) $('#guestName').textContent = to;
+            } catch (e) { }
+
+            const card = $('#cardStage');
+            let opened = false;
+
+            function initReveal() {
+                const els = document.querySelectorAll('.js-reveal');
+                if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('revealed')); return; }
+                const obs = new IntersectionObserver((entries) => {
+                    let n = 0;
+                    entries.forEach((en) => {
+                        if (en.isIntersecting) {
+                            const t = en.target;
+                            setTimeout(() => t.classList.add('revealed'), n++ * 130);
+                            obs.unobserve(t);
+                        }
+                    });
+                }, { threshold: .08 });
+                els.forEach(e => obs.observe(e));
+            }
+
+            $('#openBtn').addEventListener('click', () => {
+                if (opened) return;
+                opened = true;
+                root.classList.add('opened');
+                root.classList.remove('locked');
+                window.scrollTo(0, 0);
+                setTimeout(initReveal, 700);
+                setTimeout(() => { $('#cover').classList.add('gone'); }, 2400);
+                playMusic();
+            });
+
+            /* ========== 5. HITUNG MUNDUR ========== */
+            const target = new Date('2026-11-29T10:00:00+07:00').getTime();
+            const ids = ['cdD', 'cdH', 'cdM', 'cdS'];
+            function tick() {
+                const d = target - Date.now();
+                let vals;
+                if (d <= 0) {
+                    vals = [0, 0, 0, 0];
+                    $('#cdNote').textContent = 'Alhamdulillah, hari bahagia telah tiba.';
+                } else {
+                    vals = [Math.floor(d / 864e5), Math.floor(d % 864e5 / 36e5), Math.floor(d % 36e5 / 6e4), Math.floor(d % 6e4 / 1e3)];
+                }
+                vals.forEach((v, i) => {
+                    const el = document.getElementById(ids[i]);
+                    const s = String(v).padStart(2, '0');
+                    if (el.textContent !== s) {
+                        el.textContent = s;
+                        const b = el.parentElement;
+                        b.classList.remove('tick'); void b.offsetWidth; b.classList.add('tick');
+                    }
+                });
+            }
+            tick();
+            setInterval(tick, 1000);
+
+            /* ========== 6. TILT 3D & KILAU FOIL ========== */
+            if (!reduce && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+                let raf = null;
+                card.addEventListener('mousemove', (e) => {
+                    if (!opened || raf) return;
+                    raf = requestAnimationFrame(() => {
+                        raf = null;
+                        const r = card.getBoundingClientRect();
+                        const rx = (e.clientX - r.left) / r.width, ry = (e.clientY - r.top) / r.height;
+                        card.style.setProperty('--gx', (rx * 100).toFixed(1) + '%');
+                        card.style.setProperty('--gy', (ry * 100).toFixed(1) + '%');
+                        card.style.transform = `perspective(1400px) rotateX(${((.5 - ry) * 1.6).toFixed(2)}deg) rotateY(${((rx - .5) * 1.6).toFixed(2)}deg)`;
+                    });
+                });
+                card.addEventListener('mouseleave', () => { card.style.transform = ''; });
+            }
+
+            /* ========== 7. PENGATURAN MUSIK LATAR ========== */
+            const bgMusic = $('#bgMusic');
+            const musicBtn = $('#musicBtn');
+            let userPaused = false;
+
+            function playMusic() {
+                if (!bgMusic) return;
+                const p = bgMusic.play();
+                if (p !== undefined) {
+                    p.then(() => {
+                        if (musicBtn) {
+                            musicBtn.classList.add('playing');
+                            musicBtn.setAttribute('aria-label', 'Jeda Musik');
+                        }
+                    }).catch(() => {
+                        if (musicBtn) {
+                            musicBtn.classList.remove('playing');
+                            musicBtn.setAttribute('aria-label', 'Putar Musik');
+                        }
+                    });
+                }
+            }
+
+            function pauseMusic() {
+                if (!bgMusic) return;
+                bgMusic.pause();
+                if (musicBtn) {
+                    musicBtn.classList.remove('playing');
+                    musicBtn.setAttribute('aria-label', 'Putar Musik');
+                }
+            }
+
+            function toggleMusic() {
+                if (!bgMusic) return;
+                if (bgMusic.paused) {
+                    userPaused = false;
+                    playMusic();
+                } else {
+                    userPaused = true;
+                    pauseMusic();
+                }
+            }
+
+            if (musicBtn) {
+                musicBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleMusic();
+                });
+            }
+
+            // Memulai pemutaran saat halaman dimuat (jika diizinkan kebijakan autoplay peramban)
+            playMusic();
+
+            // Cadangan jika peramban menahan audio sampai ada interaksi/sentuhan pengguna
+            function resumeAudioOnGesture() {
+                if (bgMusic && bgMusic.paused && !userPaused) {
+                    playMusic();
+                }
+            }
+            document.addEventListener('click', resumeAudioOnGesture, { once: true });
+            document.addEventListener('touchstart', resumeAudioOnGesture, { once: true });
+
+            /* ========== 8. PARTIKEL KELOPAK MELATI, SERBUK & KILAU EMAS ========== */
+            if (reduce) return;
+            const cv = $('#royal-particles'), cx = cv.getContext('2d');
+            let W, H, P = [], dpr = Math.min(window.devicePixelRatio || 1, 2), hidden = false;
+            function mk(rand) {
+                const t = Math.random();
+                return { x: Math.random() * W, y: rand ? Math.random() * H : -20, r: Math.random() * 4.5 + 2.2, vy: Math.random() * .7 + .25, sw: Math.random() * 1.1 + .3, f: Math.random() * .025 + .01, ph: Math.random() * 6.28, fl: Math.random() * 6.28, type: t < .38 ? 'gold' : (t < .8 ? 'petal' : 'spark') };
+            }
+            function init() {
+                W = window.innerWidth; H = window.innerHeight;
+                cv.width = W * dpr; cv.height = H * dpr;
+                cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                const n = Math.min(46, Math.floor(W / 22));
+                P = Array.from({ length: n }, () => mk(true));
+            }
+            function draw() {
+                requestAnimationFrame(draw);
+                if (hidden) return;
+                cx.clearRect(0, 0, W, H);
+                for (const p of P) {
+                    p.y += p.vy; p.ph += p.f; p.fl += .04; p.x += Math.sin(p.ph) * p.sw;
+                    if (p.y > H + 20) Object.assign(p, mk(false));
+                    cx.save();
+                    cx.translate(p.x, p.y);
+                    if (p.type === 'gold') {
+                        cx.beginPath(); cx.arc(0, 0, p.r * .5, 0, 6.28);
+                        cx.fillStyle = 'rgba(250,224,120,.9)'; cx.shadowColor = '#fae078'; cx.shadowBlur = 8; cx.fill();
+                    } else if (p.type === 'petal') {
+                        cx.rotate(p.ph); cx.scale(1, Math.abs(Math.sin(p.fl)) * .7 + .3);
+                        cx.beginPath(); cx.moveTo(0, -p.r * 1.2);
+                        cx.bezierCurveTo(p.r, -p.r * .6, p.r * .9, p.r * .8, 0, p.r * 1.3);
+                        cx.bezierCurveTo(-p.r * .9, p.r * .8, -p.r, -p.r * .6, 0, -p.r * 1.2);
+                        cx.fillStyle = 'rgba(255,253,245,.88)'; cx.fill();
+                    } else {
+                        cx.globalAlpha = .5 + .5 * Math.sin(p.fl * 1.6);
+                        cx.fillStyle = '#fffbe0'; cx.shadowColor = '#fae078'; cx.shadowBlur = 10;
+                        const s = p.r * 1.3;
+                        cx.beginPath(); cx.moveTo(0, -s); cx.quadraticCurveTo(0, 0, s, 0); cx.quadraticCurveTo(0, 0, 0, s);
+                        cx.quadraticCurveTo(0, 0, -s, 0); cx.quadraticCurveTo(0, 0, 0, -s); cx.fill();
+                    }
+                    cx.restore();
+                }
+            }
+            document.addEventListener('visibilitychange', () => { hidden = document.hidden; });
+            window.addEventListener('resize', init);
+            init();
+            draw();
+        })();
+    </script>
+</body>
+
+</html>
